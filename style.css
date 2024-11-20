@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+
+.js-cost{
+    height: 23px;
+    font-size: 14px;
+    border: 1px solid grey;
+
+}
+.calculate{
+    height: 30px;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid grey;
+}
