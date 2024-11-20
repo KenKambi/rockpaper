@@ -7,24 +7,36 @@
     <title>RockPaperScissors</title>
 </head>
 <body>
-    <p> Rock Paper Scissors Game</p>
-    <button 
+    <h1> Rock Paper Scissors Game</h1>
+    
+    <button
+    class="press"
     title="Rock"
     onclick="
         yourMove('Rock');
-    "> Rock </button>
-    
+    "
+    > 
+    <img class="emojis" src="emojis/rock-emoji.png">
+    <p class="key">Rock</p>
+    </button>
     <button 
-     onclick="
+        class="press"
+        onclick="
         yourMove('Paper');
-    "> Paper </button>
-
-
-
-    <button 
-    onclick="
+    ">
+    <img class="emojis" src="emojis/paper-emoji.png">
+    <p class="key">Paper</p>
+     </button>
+    
+     <button 
+        class="press"
+        onclick="
         yourMove('Scissors');
-    "> Scissors </button>
+    ">
+    <img class="emojis" src="emojis/scissors-emoji.png">
+    <p class="key">Scissor</p>
+    </button>
+
 
     <p class="js-computer"></p>
 
@@ -32,7 +44,9 @@
 
     <p class="js-score"></p>
 
-    <button onclick="
+    <button 
+        class="reset"
+        onclick="
         score.wins = 0;
         score.losses = 0;
         score.tie = 0;
