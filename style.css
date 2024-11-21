@@ -13,6 +13,8 @@ body{
     border: 2px solid rgb(216, 213, 213);
     background-color: black;
     color: rgb(216, 213, 213);
+    cursor: pointer;
+    margin: 5px;
 }
 
 .emojis{
@@ -29,6 +31,8 @@ body{
     border: 2px solid rgb(216, 213, 213);
     background-color: black;
     color: rgb(216, 213, 213);
+    cursor: pointer;
+
 }
 
 .js-cost{
@@ -40,10 +44,11 @@ body{
 }
 .calculate{
     cursor: pointer;
-    height: 34px;
+    height: 36px;
     background-color: green;
     color: white;
     border-radius: 2px;
     border: 1px solid grey;
+    vertical-align: top;
 }
 
