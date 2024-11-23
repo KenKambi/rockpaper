@@ -19,6 +19,7 @@
             }
         }
 
+        document.querySelector('.js-press').addEventListener('click', () =>{yourMove});
 
         function calculateTotal(){
             const inputElement = document.querySelector('.js-cost');
