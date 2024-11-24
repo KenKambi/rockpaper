@@ -1,7 +1,6 @@
 
         //object to store scores
-        let score = 
-        JSON.parse(localStorage.getItem('score'));
+        let score =  JSON.parse(localStorage.getItem('score'));
 
         if(!score)
         {
@@ -12,15 +11,28 @@
             };
         }
 
-        function handleCostKeydown(event){
-            console.log(event.key);
+       
+        //Use.eventListener in scrpt.js isntead of onclick in html. 
+
+        document.querySelector('.js-press-rock').addEventListener('click', () =>{yourMove('Rock')});
+        document.querySelector('.js-press-paper').addEventListener('click', () => {yourMove('Paper')});
+        document.querySelector('.js-press-scissor').addEventListener('click', () => {yourMove('Scissors')});
+
+        document.querySelector('.js-cost').addEventListener('keydown', (event) => {  
             if(event.key === 'Enter'){
             calculateTotal();
-            }
-        }
+            }});
+        
+        document.querySelector('.js-calculate').addEventListener('click', () => {calculateTotal()});
+        document.querySelector('.js-reset').addEventListener('click', () => {
+            score.wins = 0;
+            score.losses = 0;
+            score.tie = 0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+        });
 
-        document.querySelector('.js-press').addEventListener('click', () =>{yourMove});
-
+        
         function calculateTotal(){
             const inputElement = document.querySelector('.js-cost');
             let cost = Number(inputElement.value);

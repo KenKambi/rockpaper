@@ -9,30 +9,27 @@
 
 <body>
     <h1> Rock Paper Scissors Game</h1>
+    <!-- Rock Button-->
     <button
-    class="press js-press"
+    class="press js-press-rock"
     title="Rock"
-    onclick="
-        yourMove('Rock');
-    "
     > 
     <img class="emojis" src="emojis/rock-emoji.png">
     <p class="key">Rock</p>
     </button>
+
+    <!-- Paper Button-->
     <button 
-        class="press"
-        onclick="
-        yourMove('Paper');
-    ">
+        class="press js-press-paper"   
+    >
     <img class="emojis" src="emojis/paper-emoji.png">
     <p class="key">Paper</p>
      </button>
     
-     <button 
-        class="press"
-        onclick="
-        yourMove('Scissors');
-    ">
+    <!-- Scissor Button-->
+    <button 
+        class="press js-press-scissor"
+    >
     <img class="emojis" src="emojis/scissors-emoji.png">
     <p class="key">Scissor</p>
     </button>
@@ -44,29 +41,21 @@
 
     <p class="js-score"></p>
 
-    <button 
-        class="reset"
-        onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.tie = 0;
-        localStorage.removeItem('score');
-        updateScoreElement();
-    ">Reset Score</button>
+    <!-- Reset Button-->
+    <button  class="reset js-reset"> 
+    Reset Score</button>
 
+
+    <!-- Shipping Calculator-->
     <p><u>Amazon Shipping Calculator</u></p>
 
     <p>For orders below $50 there is a $10 shipping fee:</p>
 
-    <input placeholder="Cost of order" class="js-cost" onkeydown="
-    handleCostKeydown(event); //checks if Enter has been pressed to activate Calculate
+    <input placeholder="Cost of order" class="js-cost">
 
-    ">
-    <button class="calculate" onclick=" 
-    calculateTotal();
-    
+    <button class="calculate js-calculate" 
+    >Calculate</button>
 
-    ">Calculate</button>
     <p class="js-total-cost"></p>
 
     <script src="script.js"></script>
